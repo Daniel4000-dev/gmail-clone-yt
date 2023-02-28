@@ -5,6 +5,8 @@ import './EmailRow.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { selectMail } from './features/counter/mailSlice';
+
+
 function EmailRow({ id, title, subject, description, time }) {
     const navigate = useNavigate();
     const dispacth = useDispatch();

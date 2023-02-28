@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { closeSendMessage} from './features/counter/mailSlice';
 import { db } from './firebase';
-import { serverTimestamp } from 'firebase/firestore';
+import { FieldValue, serverTimestamp,Timestamp } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 
 
@@ -22,7 +22,7 @@ function SendMail() {
                 to: formData.to,
                 subject: formData.subject,
                 message: formData.message,
-                timestamp: serverTimestamp(),
+                timestamp: FieldValue.serverTimestamp(),
         })
         // onclose()
         }    catch (err) {

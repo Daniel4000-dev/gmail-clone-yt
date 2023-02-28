@@ -10,22 +10,31 @@ import EmailRow from './EmailRow';
 import './Section';
 import Section from './Section';
 import { db } from './firebase';
-import { collection,onSnapshot, getDocs, Timestamp } from 'firebase/firestore';
+import { collection,onSnapshot, getDocs, Timestamp, doc } from 'firebase/firestore';
 
 function EmailList() {
 
+  // const timestamp = Timestamp.now();
+  // const date = timestamp.toDate();
+  // const utcString = date.toUTCString();
+
+  // const [timstamp, setTimestamp] = useState(null);
   const [emails, setEmails] = useState([]);
-  const timestamp = new Timestamp();
   useEffect(() => { 
-    onSnapshot(collection(db, 'email'), (snapshot) =>
-    setEmails(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id}))))
-    // const fetchMail = async () => {
-    //   const colRef = await getDocs(collection(db, 'email'));
-    //   setEmails(colRef.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    //   console.log(colRef)
-    // };
-    // fetchMail();
+
+    // onSnapshot(collection(db, 'email'), (snapshot) =>
+    // setEmails(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id}))))
+    const fetchMail = async () => {
+      const colRef = await getDocs(collection(db, 'email'));
+      setEmails(colRef.docs.map((doc) => ({
+         ...doc.data(),
+          id: doc.id 
+        })));
+      console.log(colRef)
+    };
+    fetchMail();
   }, []);
+
  
   return (
     <div className='emailList'>
@@ -73,7 +82,7 @@ function EmailList() {
           title={data.to}
           subject={data.subject}
           description={data.message}
-          time={new Date(timestamp?.seconds * 1000).toUTCString()}
+          time={new Date(data.timestamp.toMillis()).toLocaleString()}
           
           />
         ))}
