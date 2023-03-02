@@ -82,12 +82,129 @@ function EmailList() {
           title={data.to}
           subject={data.subject}
           description={data.message}
-          time={new Date(data.timestamp.toMillis()).toLocaleString()}
+          // time={new Date(data.timestamp.toMillis()).toLocaleString()}
           
           />
         ))}
 
         <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is a test'
+        time='10pm'
+        />
+        <EmailRow 
+        title='Twitch'
+        subject='Hey fellow writer'
+        description='This is Dope'
+        time='10pm'
+        />
+
+<EmailRow 
         title='Twitch'
         subject='Hey fellow writer'
         description='This is a test'
